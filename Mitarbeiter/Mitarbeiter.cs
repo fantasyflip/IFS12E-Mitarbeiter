@@ -70,9 +70,12 @@ namespace Mitarbeiter
 
         }
 
-        public CArbeiter(String neuVorname, String Nachname, double Stundenzahl, double Stundenlohn)
+        public CArbeiter(String neuVorname, String neuNachname, double neuStundenzahl, double neuStundenlohn)
         {
-
+            this.setVorname(neuVorname);
+            this.setNachname(neuNachname);
+            this.setStundenzahl(neuStundenzahl);
+            this.setStundenlohn(neuStundenlohn);
         }
 
         public double getBrutto()
