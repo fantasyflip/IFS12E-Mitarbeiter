@@ -65,25 +65,49 @@ namespace Mitarbeiter
         private void btnSaveAng1_Click(object sender, RoutedEventArgs e)
         {
             // Hier fehlt Daten in das jeweilige Objekt übertragen
+            double d_brutto = 0.0;
+            bool b_parse = false;
 
+            b_parse = double.TryParse(txtG_Ang1.Text, out d_brutto);
 
+            if (b_parse)
+            {
+                c_An1.setVorname(txtVN_Ang1.Text);
+                c_An1.setNachname(txtNN_Ang1.Text);
+                c_An1.setBrutto(d_brutto);
 
-
-
-            txtNN_Ang1.Clear();
-            txtVN_Ang1.Clear();
-            txtG_Ang1.Clear(); 
+                txtNN_Ang1.Clear();
+                txtVN_Ang1.Clear();
+                txtG_Ang1.Clear();
+            }
+            else
+            {
+                MessageBox.Show("Fehler in der Eingabe", "Fehler", MessageBoxButton.OK, MessageBoxImage.Error);
+            }
         }
 
         private void btnSaveAng2_Click(object sender, RoutedEventArgs e)
         {
             // Hier fehlt Daten in das jeweilige Objekt übertragen
+            double d_brutto = 0.0;
+            bool b_parse = false;
 
+            b_parse = double.TryParse(txtG_Ang2.Text, out d_brutto);
 
+            if (b_parse)
+            {
+                c_An2.setVorname(txtVN_Ang2.Text);
+                c_An2.setNachname(txtNN_Ang2.Text);
+                c_An2.setBrutto(d_brutto);
 
-            txtNN_Ang2.Clear();
-            txtVN_Ang2.Clear();
-            txtG_Ang2.Clear(); 
+                txtNN_Ang2.Clear();
+                txtVN_Ang2.Clear();
+                txtG_Ang2.Clear();
+            }
+            else
+            {
+                MessageBox.Show("Fehler in der Eingabe", "Fehler", MessageBoxButton.OK, MessageBoxImage.Error);
+            }
         }
 
         private void btnSaveArb1_Click(object sender, RoutedEventArgs e)
