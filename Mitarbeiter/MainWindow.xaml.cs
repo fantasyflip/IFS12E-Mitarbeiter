@@ -113,29 +113,59 @@ namespace Mitarbeiter
         private void btnSaveArb1_Click(object sender, RoutedEventArgs e)
         {
             // Hier fehlt Daten in das jeweilige Objekt übertragen
+            double d_SL = 0.0;
+            double d_SZ = 0.0;
+            bool b_parse = false;
 
+            b_parse = double.TryParse(txtSL_Arb1.Text, out d_SL);
+            b_parse = double.TryParse(txtSZ_Arb1.Text, out d_SZ);
 
+            if (b_parse)
+            { 
+                c_Ar1.setVorname(txtVN_Arb1.Text);
+                c_Ar1.setNachname(txtNN_Arb1.Text);
+                c_Ar1.setStundenlohn(d_SL);
+                c_Ar1.setStundenzahl(d_SZ);
 
-
-            txtNN_Arb1.Clear();
-            txtVN_Arb1.Clear();
-            txtG_Arb1.Clear();
-            txtSL_Arb1.Clear();
-            txtSZ_Arb1.Clear();
+                txtNN_Arb1.Clear();
+                txtVN_Arb1.Clear();
+                txtG_Arb1.Clear();
+                txtSL_Arb1.Clear();
+                txtSZ_Arb1.Clear();
+            }
+            else
+            {
+                MessageBox.Show("Fehler in der Eingabe", "Fehler", MessageBoxButton.OK, MessageBoxImage.Error);
+            }
         }
 
         private void btnSaveArb2_Click(object sender, RoutedEventArgs e)
         {
             // Hier fehlt Daten in das jeweilige Objekt übertragen
+            double d_SL = 0.0;
+            double d_SZ = 0.0;
+            bool b_parse = false;
 
+            b_parse = double.TryParse(txtSL_Arb2.Text, out d_SL);
+            b_parse = double.TryParse(txtSZ_Arb2.Text, out d_SZ);
 
+            if (b_parse)
+            {
+                c_Ar2.setVorname(txtVN_Arb2.Text);
+                c_Ar2.setNachname(txtNN_Arb2.Text);
+                c_Ar2.setStundenlohn(d_SL);
+                c_Ar2.setStundenzahl(d_SZ);
 
-
-            txtNN_Arb2.Clear();
-            txtVN_Arb2.Clear();
-            txtG_Arb2.Clear();
-            txtSL_Arb2.Clear();
-            txtSZ_Arb2.Clear();
+                txtNN_Arb2.Clear();
+                txtVN_Arb2.Clear();
+                txtG_Arb2.Clear();
+                txtSL_Arb2.Clear();
+                txtSZ_Arb2.Clear();
+            }
+            else
+            {
+                MessageBox.Show("Fehler in der Eingabe", "Fehler", MessageBoxButton.OK, MessageBoxImage.Error);
+            }
         }
     }
 }
