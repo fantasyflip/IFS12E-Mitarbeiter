@@ -39,7 +39,7 @@ namespace Mitarbeiter
 
         public CAngestellter()
         {
-
+            
         }
 
         public CAngestellter(String neuVorname, String neuNachname, double neuBrutto)
